@@ -1,5 +1,7 @@
 # Listenly
 
+An angular-bootstrap frontend application imitating music platform using json-server.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.7.
 
 ## Development server
