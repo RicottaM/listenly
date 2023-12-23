@@ -1,3 +1,17 @@
 .flex-column {
   height: 100vh;
+  background-color: #05386b;
+  color: #5cdb95;
+}
+
+li {
+  border-top: #8ee4af 1px solid;
+}
+
+.nav-link {
+  color: #5cdb95;
+}
+
+.nav-link:hover {
+  background-color: #379683;
 }
