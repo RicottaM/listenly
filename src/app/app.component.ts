@@ -1,14 +1,17 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core'
+import { CommonModule } from '@angular/common'
+import { RouterOutlet } from '@angular/router'
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
+import { NavComponent } from './components/nav/nav.component'
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet],
+  imports: [CommonModule, RouterOutlet, NgbModule, NavComponent, FontAwesomeModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
 export class AppComponent {
-  title = 'listenly';
+  title = 'listenly'
 }

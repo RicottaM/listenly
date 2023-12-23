@@ -1,1 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
+/*  
+color-palette: 
+    contrast-blue: #4285f4  
+    strong: #5c2018
+    background: #bc4639
+    text: #d4a59a
+    light: #f3e0dc
+*/
+
+body {
+    background-color: #bc4639;
+    color: #d4a59a;
+    margin: 0;
+    padding: 0;
+}
