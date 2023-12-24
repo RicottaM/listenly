@@ -1,1 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Nunito:wght@500&family=Pacifico&family=Sevillana&display=swap');
+/*  
+color-palette: 
+    background-green: #5cdb95 
+    text-blue: #05386b
+    sea-green: #379683
+    light-green: #8ee4af
+    light: #edf5e1
+*/
+
+body {
+  background-color: #5cdb95;
+  color: #05386b;
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+}
