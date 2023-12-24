@@ -1,6 +1,6 @@
 import { Component } from '@angular/core'
-import { DescriptionComponent } from '../desctiption/description.component'
-import { NavComponent } from '../nav/nav.component'
+import { DescriptionComponent } from '../../desctiption/description.component'
+import { NavComponent } from '../../nav/nav.component'
 
 @Component({
   selector: 'app-home-page',

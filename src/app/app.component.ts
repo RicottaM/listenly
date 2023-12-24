@@ -5,7 +5,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
 import { NavComponent } from './components/nav/nav.component'
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
 import { DescriptionComponent } from './components/desctiption/description.component'
-import { HomePageComponent } from './components/home-page/home-page.component'
+import { HomePageComponent } from './components/views/home-page/home-page.component'
 
 @Component({
   selector: 'app-root',
