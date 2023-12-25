@@ -12,6 +12,8 @@ li {
   color: #5cdb95;
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.nav-link:visited {
   background-color: #379683;
+  color: #5cdb95;
 }
