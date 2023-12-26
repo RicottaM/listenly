@@ -14,8 +14,8 @@ export const routes: Routes = [
     component: LoginPageComponent,
   },
   {
-    path: 'songs',
-    title: 'Listenly | Songs',
+    path: 'recordings',
+    title: 'Listenly | Recordings',
     component: LoginPageComponent,
   },
   {

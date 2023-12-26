@@ -1,0 +1,24 @@
+{
+  "users": [
+    {
+      "nickname": "john_doe",
+      "email": "john.doe@example.com",
+      "password": "password1"
+    },
+    {
+      "nickname": "alice_smith",
+      "email": "alice.smith@example.com",
+      "password": "password2"
+    },
+    {
+      "nickname": "bob_jenkins",
+      "email": "bob.jenkins@example.com",
+      "password": "password3"
+    },
+    {
+      "nickname": "admin",
+      "email": "admin@example.com",
+      "password": "admin"
+    }
+  ]
+}

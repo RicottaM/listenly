@@ -4,29 +4,41 @@
   </a>
   <ul class="nav nav-pills flex-column fs-6">
     <li class="nav-item py-3">
-      <a class="nav-link" href="/songs" routerLink="/songs" routerLinkActive="active"
+      <a class="nav-link" routerLink="/recordings" routerLinkActive="active"
         ><img src="../../../assets/svg/note.svg" width="40" />
-        <div>Songs</div></a
+        <div>Recordings</div></a
       >
     </li>
     <li class="nav-item py-3">
-      <a class="nav-link" href="/playlists" routerLink="/playlists" routerLinkActive="active"
+      <a class="nav-link" routerLink="/playlists" routerLinkActive="active"
         ><img src="../../../assets/svg/playlist.svg" width="40" />
         <div>Playlists</div></a
       >
     </li>
     <li class="nav-item py-3">
-      <a class="nav-link" href="/albums" routerLink="/albums" routerLinkActive="active"
+      <a class="nav-link" routerLink="/albums" routerLinkActive="active"
         ><img src="../../../assets/svg/album.svg" width="40" />
         <div>Albums</div></a
       >
     </li>
 
-    <li class="nav-item py-3 mt-auto">
-      <a class="nav-link" href="/login" routerLink="/login" routerLinkActive="active"
-        ><img src="../../../assets/svg/login.svg" width="40" />
-        <div>Sign in</div></a
-      >
+    <li class="nav-item py-3 mt-auto" *ngIf="!userName">
+      <a class="nav-link" routerLink="/login" routerLinkActive="active">
+        <img src="../../../assets/svg/login.svg" width="40" />
+        <div>Sign in</div>
+      </a>
+    </li>
+
+    <li class="nav-item py-3 mt-auto" *ngIf="userName">
+      <a class="nav-link" routerLink="" routerLinkActive="active">
+        <img src="../../../assets/svg/user.svg" class="mx-auto d-block" width="40" />
+        <div>{{ userName }}</div>
+      </a>
+
+      <!-- <a class="nav-item" routerLink="/" routerLinkActive="active">
+        <img src="../../../assets/svg/logout.svg" width="40" (click)="logout()" />
+        <div>Sign out</div>
+      </a> -->
     </li>
   </ul>
 </div>

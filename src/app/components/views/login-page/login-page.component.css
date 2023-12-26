@@ -1,19 +1,18 @@
 h1,
 label,
-p,
-input::placeholder {
+p {
   color: #5cdb95;
 }
 
 input {
   background-color: #edf5e1;
-  color: #05386b;
+  color: #379683;
   border: none;
 }
 
 input:focus {
   background-color: #edf5e1;
-  color: #05386b;
+  color: #379683;
   box-shadow: none;
   outline: none;
   border: none;

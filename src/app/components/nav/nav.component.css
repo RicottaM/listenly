@@ -17,3 +17,14 @@ li {
   background-color: #379683;
   color: #5cdb95;
 }
+
+.custom-link {
+  text-decoration: none;
+  color: #5cdb95;
+}
+
+.custom-link:hover {
+  text-decoration: none;
+  color: #5cdb95;
+  background-color: #379683;
+}
