@@ -1,0 +1,48 @@
+h1,
+label,
+p {
+  color: #5cdb95;
+}
+
+input {
+  background-color: #edf5e1;
+  color: #379683;
+  border: none;
+}
+
+input:focus {
+  background-color: #edf5e1;
+  color: #379683;
+  box-shadow: none;
+  outline: none;
+  border: none;
+}
+
+button {
+  color: #5cdb95;
+  border: 2px solid #5cdb95;
+}
+
+button:hover {
+  background-color: #379683;
+  color: #5cdb95;
+}
+
+form {
+  background-color: #05386b;
+  border-radius: 20px;
+}
+
+.nav-link {
+  color: #5cdb95;
+}
+
+.nav-link:hover,
+.nav-link:visited {
+  color: #edf5e1;
+}
+
+.custom {
+  border-top: 1px solid #5cdb95;
+  opacity: 100%;
+}

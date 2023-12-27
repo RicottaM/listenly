@@ -1,3 +1,58 @@
 <div class="d-flex">
   <app-nav></app-nav>
+  <div class="d-flex align-items-center mb-3 justify-content-center w-100">
+    <form class="px-5 d-flex flex-column" [formGroup]="applyForm" (submit)="register()">
+      <div class="row py-4 justify-content-center align-items-center">
+        <div class="col-auto"><img src="../../../../assets/svg/logo-small.svg" /></div>
+        <div class="col-auto"><h1>Register</h1></div>
+      </div>
+      <hr class="custom" />
+      <div class="form-group py-3">
+        <div class="form-group py-3">
+          <label for="email" class="fs-5">Nickname</label>
+          <input
+            type="text"
+            class="form-control fs-5"
+            id="nickname"
+            formControlName="nickname"
+            placeholder=""
+            autocomplete="off"
+          />
+        </div>
+        <label for="email" class="fs-5">Email</label>
+        <input
+          type="email"
+          class="form-control fs-5"
+          id="email"
+          formControlName="email"
+          placeholder=""
+          autocomplete="off"
+        />
+      </div>
+      <div class="form-group pb-3">
+        <label for="password" class="fs-5">Password</label>
+        <input
+          type="password"
+          class="form-control fs-5"
+          id="password"
+          formControlName="password"
+          placeholder=""
+          autocomplete="off"
+        />
+      </div>
+      <div class="form-group">
+        <label for="password-repeat" class="fs-5">Repeat password</label>
+        <input
+          type="password"
+          class="form-control fs-5"
+          id="password-repeat"
+          formControlName="passwordRepeat"
+          placeholder=""
+          autocomplete="off"
+        />
+      </div>
+
+      <button class="btn fs-5 my-4">Sign up</button>
+    </form>
+  </div>
 </div>

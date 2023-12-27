@@ -17,14 +17,45 @@ export class AuthService {
     return (await users.json()) ?? undefined
   }
 
-  async getUser(email: string): Promise<User | undefined> {
+  async getUserByEmail(email: string): Promise<User | undefined> {
     const users = await this.getUsers()
 
     return users.find((user: User) => user.email === email)
   }
 
+  async addUser(nickname: string, email: string, password: string) {
+    const userData = {
+      nickname: nickname,
+      email: email,
+      password: password,
+    }
+
+    await fetch(this.userUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(userData),
+    })
+      .then(response => {
+        if (!response.ok) {
+          response.text().then(errorText => {
+            console.error(`Server error: ${response.status} - ${errorText}`)
+          })
+
+          if (response instanceof Error) {
+            throw new Error(response.message)
+          }
+          throw new Error('An error occured while adding user')
+        }
+      })
+      .catch(error => {
+        console.error('There was a problem with the fetch operation:', error)
+      })
+  }
+
   async login(email: string, password: string): Promise<void> {
-    const user = await this.getUser(email)
+    const user = await this.getUserByEmail(email)
 
     if (!user) {
       console.error('Email not found')

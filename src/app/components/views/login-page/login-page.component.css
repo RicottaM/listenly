@@ -1,6 +1,5 @@
 h1,
-label,
-p {
+label {
   color: #5cdb95;
 }
 
@@ -37,8 +36,7 @@ form {
   color: #5cdb95;
 }
 
-.nav-link:hover,
-.nav-link:visited {
+.nav-link:hover {
   color: #edf5e1;
 }
 

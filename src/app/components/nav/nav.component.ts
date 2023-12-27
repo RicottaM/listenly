@@ -1,8 +1,7 @@
 import { Component, inject } from '@angular/core'
 import { RouterLink, RouterLinkActive } from '@angular/router'
 import { AuthService } from '../../services/auth/auth.service'
-import { CommonModule, NgComponentOutlet } from '@angular/common'
-import { User } from '../../models/user.model'
+import { CommonModule } from '@angular/common'
 
 @Component({
   selector: 'app-nav',
