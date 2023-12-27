@@ -35,6 +35,18 @@
       "email": "SoundMaaaster@example.com",
       "password": "SoundMaaaster",
       "id": 6
+    },
+    {
+      "nickname": "YourFriend",
+      "email": "your.friend@example.com",
+      "password": "yourfriend",
+      "id": 7
+    },
+    {
+      "nickname": "YaasQueen",
+      "email": "YaasQueen@example.com",
+      "password": "yasqueen",
+      "id": 8
     }
   ]
 }

@@ -2,7 +2,7 @@ import { Component, inject } from '@angular/core'
 import { NavComponent } from '../../nav/nav.component'
 import { FormGroup, FormControl, ReactiveFormsModule, Validators } from '@angular/forms'
 import { AuthService } from '../../../services/auth/auth.service'
-import { RouterLink, RouterLinkActive } from '@angular/router'
+import { Router, RouterLink, RouterLinkActive } from '@angular/router'
 import { User } from '../../../models/user.model'
 
 @Component({
@@ -26,21 +26,16 @@ export class SignUpComponent {
   })
 
   authService: AuthService = inject(AuthService)
+  router: Router = inject(Router)
 
   async register(): Promise<void> {
     if (this.applyForm.valid) {
       if (this.applyForm.value.password === this.applyForm.value.passwordRepeat) {
-        const userTaken = await this.authService.getUserByEmail(this.applyForm.value.email ?? '')
-
-        if (userTaken) {
-          console.error('Email already in use')
-        } else {
-          this.authService.addUser(
-            this.applyForm.value.nickname ?? '',
-            this.applyForm.value.email ?? '',
-            this.applyForm.value.password ?? '',
-          )
-        }
+        await this.authService.addUser(
+          this.applyForm.value.nickname ?? '',
+          this.applyForm.value.email ?? '',
+          this.applyForm.value.password ?? '',
+        )
       } else {
         console.error('Password mismatch')
       }

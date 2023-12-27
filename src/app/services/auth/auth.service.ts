@@ -30,28 +30,37 @@ export class AuthService {
       password: password,
     }
 
-    await fetch(this.userUrl, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(userData),
-    })
-      .then(response => {
-        if (!response.ok) {
-          response.text().then(errorText => {
-            console.error(`Server error: ${response.status} - ${errorText}`)
-          })
+    const userTaken = await this.getUserByEmail(email)
 
-          if (response instanceof Error) {
-            throw new Error(response.message)
+    if (userTaken) {
+      console.error('Email already in use')
+    } else {
+      await fetch(this.userUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(userData),
+      })
+        .then(response => {
+          if (!response.ok) {
+            response.text().then(errorText => {
+              console.error(`Server error: ${response.status} - ${errorText}`)
+            })
+
+            if (response instanceof Error) {
+              throw new Error(response.message)
+            }
+            throw new Error('An error occured while adding user')
           }
-          throw new Error('An error occured while adding user')
-        }
-      })
-      .catch(error => {
-        console.error('There was a problem with the fetch operation:', error)
-      })
+        })
+        .catch(error => {
+          console.error('There was a problem with the fetch operation:', error)
+        })
+
+      this.currentUser.next(userData?.nickname ?? null)
+      this.router.navigate(['/'])
+    }
   }
 
   async login(email: string, password: string): Promise<void> {
