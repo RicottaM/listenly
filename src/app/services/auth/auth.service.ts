@@ -7,7 +7,7 @@ import { Router } from '@angular/router'
   providedIn: 'root',
 })
 export class AuthService {
-  private currentUser: BehaviorSubject<string | null> = new BehaviorSubject<string | null>(null)
+  private currentUser: BehaviorSubject<User | null> = new BehaviorSubject<User | null>(null)
   private userUrl: string = 'http://localhost:3000/users'
   private router: Router = inject(Router)
 
@@ -58,7 +58,9 @@ export class AuthService {
           console.error('There was a problem with the fetch operation:', error)
         })
 
-      this.currentUser.next(userData?.nickname ?? null)
+      const user = await this.getUserByEmail(email)
+
+      this.currentUser.next(user ?? null)
       this.router.navigate(['/'])
     }
   }
@@ -70,7 +72,7 @@ export class AuthService {
       console.error('Email not found')
     } else {
       if (user.password === password) {
-        this.currentUser.next(user?.nickname ?? null)
+        this.currentUser.next(user ?? null)
         this.router.navigate(['/'])
       } else {
         console.error('Invalid password')
@@ -82,7 +84,7 @@ export class AuthService {
     this.currentUser.next(null)
   }
 
-  getCurrentUser(): Observable<string | null> {
+  getCurrentUser(): Observable<User | null> {
     return this.currentUser.asObservable()
   }
 }

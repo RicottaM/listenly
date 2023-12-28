@@ -47,6 +47,13 @@
       "email": "YaasQueen@example.com",
       "password": "yasqueen",
       "id": 8
+    },
+    {
+      "nickname": "JefftyJeff",
+      "email": "JefftyJeff@example.com",
+      "password": "jeffty123",
+      "id": 9,
+      "recordings": []
     }
   ]
 }

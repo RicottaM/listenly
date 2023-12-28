@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core'
 import { RouterLink, RouterLinkActive } from '@angular/router'
 import { AuthService } from '../../services/auth/auth.service'
 import { CommonModule } from '@angular/common'
+import { User } from '../../models/user.model'
 
 @Component({
   selector: 'app-nav',
@@ -15,8 +16,8 @@ export class NavComponent {
   userName: string | null = null
 
   constructor() {
-    this.authService.getCurrentUser().subscribe((userName: string | null) => {
-      this.userName = userName
+    this.authService.getCurrentUser().subscribe((user: User | null) => {
+      this.userName = user?.nickname ?? null
     })
   }
 
