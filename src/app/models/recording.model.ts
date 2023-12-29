@@ -3,4 +3,5 @@ export interface Recording {
   title: string
   minutes: number
   seconds: number
+  artist: string
 }

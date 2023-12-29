@@ -5,6 +5,7 @@ import { User } from '../../../models/user.model'
 import { Recording } from '../../../models/recording.model'
 import { CommonModule } from '@angular/common'
 import { LoginFormComponent } from '../../login-form/login-form.component'
+import { RecordingService } from '../../../services/recording/recording.service'
 
 @Component({
   selector: 'app-recordings',
@@ -16,18 +17,17 @@ import { LoginFormComponent } from '../../login-form/login-form.component'
 export class RecordingsComponent {
   authService: AuthService = inject(AuthService)
   recordingService: RecordingService = inject(RecordingService)
+
   recordings: Recording[] = []
-  userName: string | null = null
+  userRecordings: number[] = []
 
   constructor() {
     this.authService.getCurrentUser().subscribe((user: User | null) => {
-      this.userName = user?.nickname ?? null
+      this.userRecordings = user?.recordings ?? []
 
-      const recordingsId = user?.recordings ?? []
-
-      const recordings = await
+      this.recordingService.getRecordings().then((recordings: Recording[]) => {
+        this.recordings = recordings.filter((recording: Recording) => this.userRecordings.includes(recording.id))
+      })
     })
-
-    this.a
   }
 }

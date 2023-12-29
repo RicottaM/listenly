@@ -4,56 +4,206 @@
       "id": 1,
       "nickname": "john_doe",
       "email": "john.doe@example.com",
-      "password": "password1"
+      "password": "password1",
+      "recordings": [1, 5, 9, 14]
     },
     {
       "id": 2,
       "nickname": "alice_smith",
       "email": "alice.smith@example.com",
-      "password": "password2"
+      "password": "password2",
+      "recordings": [2, 6, 10, 15]
     },
     {
       "id": 3,
       "nickname": "bob_jenkins",
       "email": "bob.jenkins@example.com",
-      "password": "password3"
+      "password": "password3",
+      "recordings": [3, 7, 11, 16]
     },
     {
       "id": 4,
       "nickname": "admin",
       "email": "admin@example.com",
-      "password": "admin"
+      "password": "admin",
+      "recordings": [4, 8, 12, 17]
     },
     {
       "nickname": "Joshua13",
       "email": "joshua13@example.com",
       "password": "joshua13",
-      "id": 5
+      "id": 5,
+      "recordings": [18, 19, 20, 13]
     },
     {
       "nickname": "SoundMaaaster",
       "email": "SoundMaaaster@example.com",
       "password": "SoundMaaaster",
-      "id": 6
+      "id": 6,
+      "recordings": [7, 11, 15, 1]
     },
     {
       "nickname": "YourFriend",
       "email": "your.friend@example.com",
       "password": "yourfriend",
-      "id": 7
+      "id": 7,
+      "recordings": [3, 5, 10, 16]
     },
     {
       "nickname": "YaasQueen",
       "email": "YaasQueen@example.com",
       "password": "yasqueen",
-      "id": 8
+      "id": 8,
+      "recordings": [2, 9, 12, 20]
     },
     {
       "nickname": "JefftyJeff",
       "email": "JefftyJeff@example.com",
       "password": "jeffty123",
       "id": 9,
-      "recordings": []
+      "recordings": [13, 14, 18, 19]
+    }
+  ],
+  "recordings": [
+    {
+      "id": 1,
+      "title": "Billie Jean",
+      "artist": "Michael Jackson",
+      "minutes": 4,
+      "seconds": 55
+    },
+    {
+      "id": 2,
+      "title": "Bohemian Rhapsody",
+      "artist": "Queen",
+      "minutes": 5,
+      "seconds": 55
+    },
+    {
+      "id": 3,
+      "title": "Imagine",
+      "artist": "John Lennon",
+      "minutes": 3,
+      "seconds": 20
+    },
+    {
+      "id": 4,
+      "title": "Shape of You",
+      "artist": "Ed Sheeran",
+      "minutes": 3,
+      "seconds": 54
+    },
+    {
+      "id": 5,
+      "title": "Happy",
+      "artist": "Pharrell Williams",
+      "minutes": 3,
+      "seconds": 53
+    },
+    {
+      "id": 6,
+      "title": "Stairway to Heaven",
+      "artist": "Led Zeppelin",
+      "minutes": 8,
+      "seconds": 2
+    },
+    {
+      "id": 7,
+      "title": "What's Going On",
+      "artist": "Marvin Gaye",
+      "minutes": 3,
+      "seconds": 53
+    },
+    {
+      "id": 8,
+      "title": "Dancing Queen",
+      "artist": "ABBA",
+      "minutes": 3,
+      "seconds": 51
+    },
+    {
+      "id": 9,
+      "title": "Hey Jude",
+      "artist": "The Beatles",
+      "minutes": 7,
+      "seconds": 6
+    },
+    {
+      "id": 10,
+      "title": "Superstition",
+      "artist": "Stevie Wonder",
+      "minutes": 4,
+      "seconds": 26
+    },
+    {
+      "id": 11,
+      "title": "Hotel California",
+      "artist": "Eagles",
+      "minutes": 6,
+      "seconds": 30
+    },
+    {
+      "id": 12,
+      "title": "Sweet Child o' Mine",
+      "artist": "Guns N' Roses",
+      "minutes": 5,
+      "seconds": 56
+    },
+    {
+      "id": 13,
+      "title": "Rolling in the Deep",
+      "artist": "Adele",
+      "minutes": 3,
+      "seconds": 48
+    },
+    {
+      "id": 14,
+      "title": "Purple Haze",
+      "artist": "Jimi Hendrix",
+      "minutes": 2,
+      "seconds": 50
+    },
+    {
+      "id": 15,
+      "title": "I Want to Hold Your Hand",
+      "artist": "The Beatles",
+      "minutes": 2,
+      "seconds": 27
+    },
+    {
+      "id": 16,
+      "title": "Sweet Caroline",
+      "artist": "Neil Diamond",
+      "minutes": 3,
+      "seconds": 21
+    },
+    {
+      "id": 17,
+      "title": "Another One Bites the Dust",
+      "artist": "Queen",
+      "minutes": 3,
+      "seconds": 35
+    },
+    {
+      "id": 18,
+      "title": "Don't Stop Believin'",
+      "artist": "Journey",
+      "minutes": 4,
+      "seconds": 11
+    },
+    {
+      "id": 19,
+      "title": "Eye of the Tiger",
+      "artist": "Survivor",
+      "minutes": 4,
+      "seconds": 5
+    },
+    {
+      "id": 20,
+      "title": "Livin' on a Prayer",
+      "artist": "Bon Jovi",
+      "minutes": 4,
+      "seconds": 10
     }
   ]
 }
