@@ -2,7 +2,12 @@
   <a class="d-flex align-items-center navbar-brand mx-auto pt-3 pb-4" routerLink="/" routerLinkActive="active">
     <img src="../../../assets/svg/logo.svg" />
   </a>
+
   <ul class="nav nav-pills flex-column fs-6">
+    <li class="nav-item py-3" *ngIf="userName">
+      <img src="../../../assets/svg/user.svg" class="mx-auto d-block" width="40" />
+      <div>{{ userName }}</div>
+    </li>
     <li class="nav-item py-3">
       <a class="nav-link" routerLink="/recordings" routerLinkActive="active"
         ><img src="../../../assets/svg/note.svg" width="40" />
@@ -27,11 +32,6 @@
         <img src="../../../assets/svg/login.svg" width="40" />
         <div>Sign in</div>
       </a>
-    </li>
-
-    <li class="nav-item py-3" *ngIf="userName">
-      <img src="../../../assets/svg/user.svg" class="mx-auto d-block" width="40" />
-      <div>{{ userName }}</div>
     </li>
 
     <li class="nav-item py-3 mt-auto mx-auto" *ngIf="userName">

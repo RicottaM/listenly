@@ -20,7 +20,6 @@ export class RecordingsComponent {
   recordingService: RecordingService = inject(RecordingService)
 
   recordings: Recording[] = []
-  userRecordings: number[] = []
 
   constructor(private cookieService: CookieService) {
     const userName: string = cookieService.get('username')
@@ -29,6 +28,7 @@ export class RecordingsComponent {
       this.recordingService.getRecordings().then((recordings: Recording[]) => {
         this.authService.getUserByNick(userName).then((user: User | undefined) => {
           this.recordings = recordings.filter((recording: Recording) => user?.recordings.includes(recording.id))
+          console.log(this.recordings)
         })
       })
     }
