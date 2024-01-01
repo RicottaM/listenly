@@ -44,7 +44,7 @@ export class RecordingService {
           if (response instanceof Error) {
             throw new Error(response.message)
           }
-          throw new Error('An error occured while adding user')
+          throw new Error('An error occured while adding recording')
         }
       })
       .catch(error => {

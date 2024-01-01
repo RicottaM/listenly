@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core'
 import { FormGroup, FormControl, ReactiveFormsModule } from '@angular/forms'
 import { AuthService } from '../../services/auth/auth.service'
 import { RouterLink, RouterLinkActive } from '@angular/router'
+import { CookieService } from 'ngx-cookie-service'
 
 @Component({
   selector: 'app-login-form',
@@ -18,7 +19,13 @@ export class LoginFormComponent {
 
   authService: AuthService = inject(AuthService)
 
+  constructor(private cookieService: CookieService) {}
+
   async login(): Promise<void> {
-    await this.authService.login(this.applyForm.value.email ?? '', this.applyForm.value.password ?? '')
+    await this.authService.login(
+      this.applyForm.value.email ?? '',
+      this.applyForm.value.password ?? '',
+      this.cookieService,
+    )
   }
 }

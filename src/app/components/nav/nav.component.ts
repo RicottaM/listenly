@@ -3,6 +3,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router'
 import { AuthService } from '../../services/auth/auth.service'
 import { CommonModule } from '@angular/common'
 import { User } from '../../models/user.model'
+import { CookieService } from 'ngx-cookie-service'
 
 @Component({
   selector: 'app-nav',
@@ -15,15 +16,11 @@ export class NavComponent {
   authService: AuthService = inject(AuthService)
   userName: string | null = null
 
-  constructor() {
-    this.authService.getCurrentUser().subscribe((user: User | null) => {
-      this.userName = user?.nickname ?? null
-    })
+  constructor(private cookieService: CookieService) {
+    this.userName = this.cookieService.get('username')
   }
 
-  logout(): void {
-    this.authService.logout()
-
-    window.location.reload()
+  async logout(): Promise<void> {
+    await this.authService.logout(this.cookieService)
   }
 }

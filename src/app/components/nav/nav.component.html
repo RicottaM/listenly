@@ -29,16 +29,16 @@
       </a>
     </li>
 
-    <li class="nav-item py-3 mt-auto" *ngIf="userName">
-      <a class="nav-link" routerLink="" routerLinkActive="active">
-        <img src="../../../assets/svg/user.svg" class="mx-auto d-block" width="40" />
-        <div>{{ userName }}</div>
-      </a>
+    <li class="nav-item py-3" *ngIf="userName">
+      <img src="../../../assets/svg/user.svg" class="mx-auto d-block" width="40" />
+      <div>{{ userName }}</div>
+    </li>
 
-      <!-- <a class="nav-item" routerLink="/" routerLinkActive="active">
-        <img src="../../../assets/svg/logout.svg" width="40" (click)="logout()" />
+    <li class="nav-item py-3 mt-auto mx-auto" *ngIf="userName">
+      <button class="nav-link" (click)="logout()">
+        <img src="../../../assets/svg/logout.svg" width="40" />
         <div>Sign out</div>
-      </a> -->
+      </button>
     </li>
   </ul>
 </div>

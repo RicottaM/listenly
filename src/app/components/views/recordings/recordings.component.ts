@@ -6,6 +6,7 @@ import { Recording } from '../../../models/recording.model'
 import { CommonModule } from '@angular/common'
 import { LoginFormComponent } from '../../login-form/login-form.component'
 import { RecordingService } from '../../../services/recording/recording.service'
+import { CookieService } from 'ngx-cookie-service'
 
 @Component({
   selector: 'app-recordings',
@@ -21,13 +22,15 @@ export class RecordingsComponent {
   recordings: Recording[] = []
   userRecordings: number[] = []
 
-  constructor() {
-    this.authService.getCurrentUser().subscribe((user: User | null) => {
-      this.userRecordings = user?.recordings ?? []
+  constructor(private cookieService: CookieService) {
+    const userName: string = cookieService.get('username')
 
+    if (userName) {
       this.recordingService.getRecordings().then((recordings: Recording[]) => {
-        this.recordings = recordings.filter((recording: Recording) => this.userRecordings.includes(recording.id))
+        this.authService.getUserByNick(userName).then((user: User | undefined) => {
+          this.recordings = recordings.filter((recording: Recording) => user?.recordings.includes(recording.id))
+        })
       })
-    })
+    }
   }
 }

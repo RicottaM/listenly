@@ -3,7 +3,7 @@ import { NavComponent } from '../../nav/nav.component'
 import { FormGroup, FormControl, ReactiveFormsModule, Validators } from '@angular/forms'
 import { AuthService } from '../../../services/auth/auth.service'
 import { Router, RouterLink, RouterLinkActive } from '@angular/router'
-import { User } from '../../../models/user.model'
+import { CookieService } from 'ngx-cookie-service'
 
 @Component({
   selector: 'app-sign-up',
@@ -35,6 +35,7 @@ export class SignUpComponent {
           this.applyForm.value.nickname ?? '',
           this.applyForm.value.email ?? '',
           this.applyForm.value.password ?? '',
+          this.cookieService,
         )
       } else {
         console.error('Password mismatch')
@@ -69,4 +70,6 @@ export class SignUpComponent {
       }
     }
   }
+
+  constructor(private cookieService: CookieService) {}
 }

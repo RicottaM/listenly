@@ -2,6 +2,7 @@ import { Component } from '@angular/core'
 import { CommonModule } from '@angular/common'
 import { RouterOutlet } from '@angular/router'
 import { NavComponent } from './components/nav/nav.component'
+import { CookieService } from 'ngx-cookie-service'
 
 @Component({
   selector: 'app-root',

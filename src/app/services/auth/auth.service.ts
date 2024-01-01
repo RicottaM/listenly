@@ -1,13 +1,12 @@
 import { Injectable, inject } from '@angular/core'
 import { User } from '../../models/user.model'
-import { BehaviorSubject, Observable } from 'rxjs'
 import { Router } from '@angular/router'
+import { CookieService } from 'ngx-cookie-service'
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
-  private currentUser: BehaviorSubject<User | null> = new BehaviorSubject<User | null>(null)
   private userUrl: string = 'http://localhost:3000/users'
   private router: Router = inject(Router)
 
@@ -23,7 +22,13 @@ export class AuthService {
     return users.find((user: User) => user.email === email)
   }
 
-  async addUser(nickname: string, email: string, password: string) {
+  async getUserByNick(userName: string): Promise<User | undefined> {
+    const users = await this.getUsers()
+
+    return users.find((user: User) => user.nickname === userName)
+  }
+
+  async addUser(nickname: string, email: string, password: string, cookieService: CookieService) {
     const userData = {
       nickname: nickname,
       email: email,
@@ -58,21 +63,19 @@ export class AuthService {
           console.error('There was a problem with the fetch operation:', error)
         })
 
-      const user = await this.getUserByEmail(email)
-
-      this.currentUser.next(user ?? null)
+      cookieService.set('username', userData.nickname, 1)
       this.router.navigate(['/'])
     }
   }
 
-  async login(email: string, password: string): Promise<void> {
+  async login(email: string, password: string, cookieService: CookieService): Promise<void> {
     const user = await this.getUserByEmail(email)
 
     if (!user) {
       console.error('Email not found')
     } else {
       if (user.password === password) {
-        this.currentUser.next(user ?? null)
+        cookieService.set('username', user.nickname, 1)
         this.router.navigate(['/'])
       } else {
         console.error('Invalid password')
@@ -80,11 +83,8 @@ export class AuthService {
     }
   }
 
-  logout(): void {
-    this.currentUser.next(null)
-  }
-
-  getCurrentUser(): Observable<User | null> {
-    return this.currentUser.asObservable()
+  async logout(cookieService: CookieService): Promise<void> {
+    cookieService.delete('username')
+    window.location.reload()
   }
 }
