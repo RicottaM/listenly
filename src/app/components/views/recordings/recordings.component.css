@@ -1,4 +1,22 @@
-.col {
-  background-color: #05386b;
-  color: #5cdb95;
+td,
+th {
+  background-color: #5cdb95;
+  color: #05386b;
+}
+
+.table tr {
+  border-bottom: 1px solid #5cdb95;
+}
+
+.table td {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.border-bottom {
+  border-color: rgba(5, 56, 107, 0.2) !important;
+}
+
+tbody tr:hover {
+  cursor: pointer;
 }

@@ -20,17 +20,28 @@ export class RecordingsComponent {
   recordingService: RecordingService = inject(RecordingService)
 
   recordings: Recording[] = []
+  userName: string = ''
+  hoveredRowIndex: number | null = null
 
   constructor(private cookieService: CookieService) {
-    const userName: string = cookieService.get('username')
+    this.userName = cookieService.get('username')
 
-    if (userName) {
+    if (this.userName) {
       this.recordingService.getRecordings().then((recordings: Recording[]) => {
-        this.authService.getUserByNick(userName).then((user: User | undefined) => {
+        this.authService.getUserByNick(this.userName).then((user: User | undefined) => {
           this.recordings = recordings.filter((recording: Recording) => user?.recordings.includes(recording.id))
           console.log(this.recordings)
         })
       })
     }
+  }
+
+  play(): void {
+    console.log('Song played!!!')
+  }
+
+  setHoveredRow(rowIndex: number | null) {
+    this.hoveredRowIndex = rowIndex
+    console.log(this.hoveredRowIndex)
   }
 }

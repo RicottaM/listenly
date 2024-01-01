@@ -26,7 +26,10 @@
       "nickname": "admin",
       "email": "admin@example.com",
       "password": "admin",
-      "recordings": [4, 8, 12, 17]
+      "recordings": [
+        4, 8, 12, 17, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44,
+        45, 46, 47, 48, 49, 50
+      ]
     },
     {
       "nickname": "Joshua13",
@@ -204,6 +207,216 @@
       "artist": "Bon Jovi",
       "minutes": 4,
       "seconds": 10
+    },
+    {
+      "id": 21,
+      "title": "The Sound of Silence",
+      "artist": "Simon & Garfunkel",
+      "minutes": 3,
+      "seconds": 5
+    },
+    {
+      "id": 22,
+      "title": "Take Me to Church",
+      "artist": "Hozier",
+      "minutes": 4,
+      "seconds": 1
+    },
+    {
+      "id": 23,
+      "title": "All Along the Watchtower",
+      "artist": "Jimi Hendrix",
+      "minutes": 4,
+      "seconds": 0
+    },
+    {
+      "id": 24,
+      "title": "The Winner Takes It All",
+      "artist": "ABBA",
+      "minutes": 4,
+      "seconds": 54
+    },
+    {
+      "id": 25,
+      "title": "Rocket Man",
+      "artist": "Elton John",
+      "minutes": 4,
+      "seconds": 41
+    },
+    {
+      "id": 26,
+      "title": "Every Breath You Take",
+      "artist": "The Police",
+      "minutes": 4,
+      "seconds": 13
+    },
+    {
+      "id": 27,
+      "title": "Wish You Were Here",
+      "artist": "Pink Floyd",
+      "minutes": 5,
+      "seconds": 34
+    },
+    {
+      "id": 28,
+      "title": "Bad Romance",
+      "artist": "Lady Gaga",
+      "minutes": 4,
+      "seconds": 54
+    },
+    {
+      "id": 29,
+      "title": "I Will Always Love You",
+      "artist": "Whitney Houston",
+      "minutes": 4,
+      "seconds": 30
+    },
+    {
+      "id": 30,
+      "title": "Livin' La Vida Loca",
+      "artist": "Ricky Martin",
+      "minutes": 4,
+      "seconds": 3
+    },
+    {
+      "id": 31,
+      "title": "Sweet Home Alabama",
+      "artist": "Lynyrd Skynyrd",
+      "minutes": 4,
+      "seconds": 45
+    },
+    {
+      "id": 32,
+      "title": "Eye in the Sky",
+      "artist": "The Alan Parsons Project",
+      "minutes": 4,
+      "seconds": 36
+    },
+    {
+      "id": 33,
+      "title": "Sweet Dreams (Are Made of This)",
+      "artist": "Eurythmics",
+      "minutes": 3,
+      "seconds": 36
+    },
+    {
+      "id": 34,
+      "title": "Despacito",
+      "artist": "Luis Fonsi ft. Daddy Yankee",
+      "minutes": 4,
+      "seconds": 42
+    },
+    {
+      "id": 35,
+      "title": "Piano Man",
+      "artist": "Billy Joel",
+      "minutes": 5,
+      "seconds": 38
+    },
+    {
+      "id": 36,
+      "title": "Karma Chameleon",
+      "artist": "Culture Club",
+      "minutes": 4,
+      "seconds": 0
+    },
+    {
+      "id": 37,
+      "title": "Everywhere",
+      "artist": "Fleetwood Mac",
+      "minutes": 3,
+      "seconds": 41
+    },
+    {
+      "id": 38,
+      "title": "Smooth",
+      "artist": "Santana ft. Rob Thomas",
+      "minutes": 4,
+      "seconds": 55
+    },
+    {
+      "id": 39,
+      "title": "With or Without You",
+      "artist": "U2",
+      "minutes": 4,
+      "seconds": 55
+    },
+    {
+      "id": 40,
+      "title": "Love Shack",
+      "artist": "The B-52's",
+      "minutes": 4,
+      "seconds": 17
+    },
+    {
+      "id": 41,
+      "title": "Un-break My Heart",
+      "artist": "Toni Braxton",
+      "minutes": 4,
+      "seconds": 29
+    },
+    {
+      "id": 42,
+      "title": "Africa",
+      "artist": "Toto",
+      "minutes": 4,
+      "seconds": 58
+    },
+    {
+      "id": 43,
+      "title": "Dust in the Wind",
+      "artist": "Kansas",
+      "minutes": 3,
+      "seconds": 27
+    },
+    {
+      "id": 44,
+      "title": "Man in the Mirror",
+      "artist": "Michael Jackson",
+      "minutes": 5,
+      "seconds": 19
+    },
+    {
+      "id": 45,
+      "title": "Jessie's Girl",
+      "artist": "Rick Springfield",
+      "minutes": 3,
+      "seconds": 14
+    },
+    {
+      "id": 46,
+      "title": "I Just Called to Say I Love You",
+      "artist": "Stevie Wonder",
+      "minutes": 4,
+      "seconds": 22
+    },
+    {
+      "id": 47,
+      "title": "Jump",
+      "artist": "Van Halen",
+      "minutes": 4,
+      "seconds": 1
+    },
+    {
+      "id": 48,
+      "title": "Total Eclipse of the Heart",
+      "artist": "Bonnie Tyler",
+      "minutes": 6,
+      "seconds": 59
+    },
+    {
+      "id": 49,
+      "title": "I Gotta Feeling",
+      "artist": "The Black Eyed Peas",
+      "minutes": 4,
+      "seconds": 49
+    },
+    {
+      "id": 50,
+      "title": "Can't Stop the Feeling!",
+      "artist": "Justin Timberlake",
+      "minutes": 3,
+      "seconds": 56
     }
   ]
 }
