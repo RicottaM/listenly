@@ -22,15 +22,16 @@ export class RecordingsComponent {
   recordings: Recording[] = []
   userName: string = ''
   hoveredRowIndex: number | null = null
+  selectedRowIndex: number | null = null
+  hoveredButton: string | null = null
 
   constructor(private cookieService: CookieService) {
-    this.userName = cookieService.get('username')
+    this.userName = this.cookieService.get('username')
 
     if (this.userName) {
       this.recordingService.getRecordings().then((recordings: Recording[]) => {
         this.authService.getUserByNick(this.userName).then((user: User | undefined) => {
           this.recordings = recordings.filter((recording: Recording) => user?.recordings.includes(recording.id))
-          console.log(this.recordings)
         })
       })
     }
@@ -40,8 +41,15 @@ export class RecordingsComponent {
     console.log('Song played!!!')
   }
 
-  setHoveredRow(rowIndex: number | null) {
+  setHoveredRow(rowIndex: number | null): void {
     this.hoveredRowIndex = rowIndex
-    console.log(this.hoveredRowIndex)
+  }
+
+  setSelectedRow(rowIndex: number | null): void {
+    this.selectedRowIndex = rowIndex
+  }
+
+  setHoveredButton(buttonType: string | null) {
+    this.hoveredButton = buttonType
   }
 }

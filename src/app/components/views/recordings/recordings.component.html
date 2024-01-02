@@ -2,7 +2,29 @@
   <app-nav></app-nav>
 
   <div class="container w-100" *ngIf="userName">
-    <h1 class="py-4">Your Recordings</h1>
+    <div class="d-flex py-3">
+      <a class="px-1 cursor-pointer jump-animation">
+        <img src="../../../../assets/svg/add-hovered.svg" width="48" />
+      </a>
+
+      <a class="px-1">
+        <img
+          src="../../../../assets/svg/delete-selected.svg"
+          class="cursor-pointer jump-animation"
+          *ngIf="selectedRowIndex !== null"
+          width="48"
+        />
+        <img
+          src="../../../../assets/svg/button-circle-round-remove-svgrepo-com.svg"
+          *ngIf="selectedRowIndex === null"
+          width="48"
+        />
+      </a>
+
+      <a class="px-1 jump-animation cursor-pointer">
+        <img src="../../../../assets/svg/globe-search-web-browser-svgrepo-com.svg" width="48" />
+      </a>
+    </div>
 
     <table class="table rounded-2 overflow-hidden table-hover" *ngIf="recordings.length > 0">
       <thead>
@@ -16,13 +38,15 @@
       <tbody>
         @for (recording of recordings; track recording.id; let index = $index) {
         <tr
-          (click)="play()"
-          class="cursor-pointer"
+          (click)="setSelectedRow(index)"
           (mouseenter)="setHoveredRow(index)"
           (mouseleave)="setHoveredRow(null)"
+          [ngClass]="{ 'table-active': selectedRowIndex === index }"
         >
-          <th scope="row" *ngIf="hoveredRowIndex !== index" class="w-10">{{ index + 1 }}</th>
-          <th scope="row" *ngIf="hoveredRowIndex === index" class="w-10">
+          <th scope="row" *ngIf="hoveredRowIndex !== index && selectedRowIndex !== index" class="w-10">
+            {{ index + 1 }}
+          </th>
+          <th scope="row" *ngIf="hoveredRowIndex === index || selectedRowIndex === index" class="w-10">
             <img src="../../../assets/svg/play.svg" />
           </th>
           <td>{{ recording.title }}</td>

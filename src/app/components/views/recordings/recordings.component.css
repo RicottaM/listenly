@@ -24,3 +24,38 @@ tbody tr:hover {
 .w-10 {
   width: 10%;
 }
+
+.table tr .selected {
+  width: 10%;
+  background-color: aqua;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.jump-animation:hover {
+  animation: jumpUp 0.35s ease-in forwards;
+}
+
+.jump-animation:not(:hover) {
+  animation: jumpDown 0.35s ease-out forwards;
+}
+
+@keyframes jumpUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes jumpDown {
+  0% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
