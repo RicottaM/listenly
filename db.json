@@ -65,6 +65,27 @@
       "password": "jeffty123",
       "id": 9,
       "recordings": [13, 14, 18, 19]
+    },
+    {
+      "nickname": "User10",
+      "email": "user10@example.com",
+      "password": "user10",
+      "id": 10,
+      "recordings": [21, 22, 23, 24]
+    },
+    {
+      "nickname": "User11",
+      "email": "user11@example.com",
+      "password": "user11",
+      "id": 11,
+      "recordings": [25, 26, 27, 28]
+    },
+    {
+      "nickname": "User12",
+      "email": "user12@example.com",
+      "password": "user12",
+      "id": 12,
+      "recordings": [29, 30, 31, 32]
     }
   ],
   "recordings": [
@@ -73,350 +94,400 @@
       "title": "Billie Jean",
       "artist": "Michael Jackson",
       "minutes": 4,
-      "seconds": 55
+      "seconds": 55,
+      "author": "admin"
     },
     {
       "id": 2,
       "title": "Bohemian Rhapsody",
       "artist": "Queen",
       "minutes": 5,
-      "seconds": 55
+      "seconds": 55,
+      "author": "admin"
     },
     {
       "id": 3,
       "title": "Imagine",
       "artist": "John Lennon",
       "minutes": 3,
-      "seconds": 20
+      "seconds": 20,
+      "author": "admin"
     },
     {
       "id": 4,
       "title": "Shape of You",
       "artist": "Ed Sheeran",
       "minutes": 3,
-      "seconds": 54
+      "seconds": 54,
+      "author": "admin"
     },
     {
       "id": 5,
       "title": "Happy",
       "artist": "Pharrell Williams",
       "minutes": 3,
-      "seconds": 53
+      "seconds": 53,
+      "author": "john_doe"
     },
     {
       "id": 6,
       "title": "Stairway to Heaven",
       "artist": "Led Zeppelin",
       "minutes": 8,
-      "seconds": 2
+      "seconds": 2,
+      "author": "alice_smith"
     },
     {
       "id": 7,
       "title": "What's Going On",
       "artist": "Marvin Gaye",
       "minutes": 3,
-      "seconds": 53
+      "seconds": 53,
+      "author": "bob_jenkins"
     },
     {
       "id": 8,
       "title": "Dancing Queen",
       "artist": "ABBA",
       "minutes": 3,
-      "seconds": 51
+      "seconds": 51,
+      "author": "admin"
     },
     {
       "id": 9,
       "title": "Hey Jude",
       "artist": "The Beatles",
       "minutes": 7,
-      "seconds": 6
+      "seconds": 6,
+      "author": "admin"
     },
     {
       "id": 10,
       "title": "Superstition",
       "artist": "Stevie Wonder",
       "minutes": 4,
-      "seconds": 26
+      "seconds": 26,
+      "author": "admin"
     },
     {
       "id": 11,
       "title": "Hotel California",
       "artist": "Eagles",
       "minutes": 6,
-      "seconds": 30
+      "seconds": 30,
+      "author": "admin"
     },
     {
       "id": 12,
       "title": "Sweet Child o' Mine",
       "artist": "Guns N' Roses",
       "minutes": 5,
-      "seconds": 56
+      "seconds": 56,
+      "author": "admin"
     },
     {
       "id": 13,
       "title": "Rolling in the Deep",
       "artist": "Adele",
       "minutes": 3,
-      "seconds": 48
+      "seconds": 48,
+      "author": "Joshua13"
     },
     {
       "id": 14,
       "title": "Purple Haze",
       "artist": "Jimi Hendrix",
       "minutes": 2,
-      "seconds": 50
+      "seconds": 50,
+      "author": "JefftyJeff"
     },
     {
       "id": 15,
       "title": "I Want to Hold Your Hand",
       "artist": "The Beatles",
       "minutes": 2,
-      "seconds": 27
+      "seconds": 27,
+      "author": "SoundMaaaster"
     },
     {
       "id": 16,
       "title": "Sweet Caroline",
       "artist": "Neil Diamond",
       "minutes": 3,
-      "seconds": 21
+      "seconds": 21,
+      "author": "YourFriend"
     },
     {
       "id": 17,
       "title": "Another One Bites the Dust",
       "artist": "Queen",
       "minutes": 3,
-      "seconds": 35
+      "seconds": 35,
+      "author": "admin"
     },
     {
       "id": 18,
       "title": "Don't Stop Believin'",
       "artist": "Journey",
       "minutes": 4,
-      "seconds": 11
+      "seconds": 11,
+      "author": "admin"
     },
     {
       "id": 19,
       "title": "Eye of the Tiger",
       "artist": "Survivor",
       "minutes": 4,
-      "seconds": 5
+      "seconds": 5,
+      "author": "JefftyJeff"
     },
     {
       "id": 20,
       "title": "Livin' on a Prayer",
       "artist": "Bon Jovi",
       "minutes": 4,
-      "seconds": 10
+      "seconds": 10,
+      "author": "YaasQueen"
     },
     {
       "id": 21,
       "title": "The Sound of Silence",
       "artist": "Simon & Garfunkel",
       "minutes": 3,
-      "seconds": 5
+      "seconds": 5,
+      "author": "User10"
     },
     {
       "id": 22,
       "title": "Take Me to Church",
       "artist": "Hozier",
       "minutes": 4,
-      "seconds": 1
+      "seconds": 1,
+      "author": "User11"
     },
     {
       "id": 23,
       "title": "All Along the Watchtower",
       "artist": "Jimi Hendrix",
       "minutes": 4,
-      "seconds": 0
+      "seconds": 0,
+      "author": "User12"
     },
     {
       "id": 24,
       "title": "The Winner Takes It All",
       "artist": "ABBA",
       "minutes": 4,
-      "seconds": 54
+      "seconds": 54,
+      "author": "admin"
     },
     {
       "id": 25,
       "title": "Rocket Man",
       "artist": "Elton John",
       "minutes": 4,
-      "seconds": 41
+      "seconds": 41,
+      "author": "admin"
     },
     {
       "id": 26,
       "title": "Every Breath You Take",
       "artist": "The Police",
       "minutes": 4,
-      "seconds": 13
+      "seconds": 13,
+      "author": "admin"
     },
     {
       "id": 27,
       "title": "Wish You Were Here",
       "artist": "Pink Floyd",
       "minutes": 5,
-      "seconds": 34
+      "seconds": 34,
+      "author": "admin"
     },
     {
       "id": 28,
       "title": "Bad Romance",
       "artist": "Lady Gaga",
       "minutes": 4,
-      "seconds": 54
+      "seconds": 54,
+      "author": "admin"
     },
     {
       "id": 29,
       "title": "I Will Always Love You",
       "artist": "Whitney Houston",
       "minutes": 4,
-      "seconds": 30
+      "seconds": 30,
+      "author": "admin"
     },
     {
       "id": 30,
       "title": "Livin' La Vida Loca",
       "artist": "Ricky Martin",
       "minutes": 4,
-      "seconds": 3
+      "seconds": 3,
+      "author": "admin"
     },
     {
       "id": 31,
       "title": "Sweet Home Alabama",
       "artist": "Lynyrd Skynyrd",
       "minutes": 4,
-      "seconds": 45
+      "seconds": 45,
+      "author": "admin"
     },
     {
       "id": 32,
       "title": "Eye in the Sky",
       "artist": "The Alan Parsons Project",
       "minutes": 4,
-      "seconds": 36
+      "seconds": 36,
+      "author": "admin"
     },
     {
       "id": 33,
       "title": "Sweet Dreams (Are Made of This)",
       "artist": "Eurythmics",
       "minutes": 3,
-      "seconds": 36
+      "seconds": 36,
+      "author": "admin"
     },
     {
       "id": 34,
       "title": "Despacito",
       "artist": "Luis Fonsi ft. Daddy Yankee",
       "minutes": 4,
-      "seconds": 42
+      "seconds": 42,
+      "author": "JefftyJeff"
     },
     {
       "id": 35,
       "title": "Piano Man",
       "artist": "Billy Joel",
       "minutes": 5,
-      "seconds": 38
+      "seconds": 38,
+      "author": "SoundMaaaster"
     },
     {
       "id": 36,
       "title": "Karma Chameleon",
       "artist": "Culture Club",
       "minutes": 4,
-      "seconds": 0
+      "seconds": 0,
+      "author": "YourFriend"
     },
     {
       "id": 37,
       "title": "Everywhere",
       "artist": "Fleetwood Mac",
       "minutes": 3,
-      "seconds": 41
+      "seconds": 41,
+      "author": "YaasQueen"
     },
     {
       "id": 38,
       "title": "Smooth",
       "artist": "Santana ft. Rob Thomas",
       "minutes": 4,
-      "seconds": 55
+      "seconds": 55,
+      "author": "User10"
     },
     {
       "id": 39,
       "title": "With or Without You",
       "artist": "U2",
       "minutes": 4,
-      "seconds": 55
+      "seconds": 55,
+      "author": "User11"
     },
     {
       "id": 40,
       "title": "Love Shack",
       "artist": "The B-52's",
       "minutes": 4,
-      "seconds": 17
+      "seconds": 17,
+      "author": "User12"
     },
     {
       "id": 41,
       "title": "Un-break My Heart",
       "artist": "Toni Braxton",
       "minutes": 4,
-      "seconds": 29
+      "seconds": 29,
+      "author": "admin"
     },
     {
       "id": 42,
       "title": "Africa",
       "artist": "Toto",
       "minutes": 4,
-      "seconds": 58
+      "seconds": 58,
+      "author": "admin"
     },
     {
       "id": 43,
       "title": "Dust in the Wind",
       "artist": "Kansas",
       "minutes": 3,
-      "seconds": 27
+      "seconds": 27,
+      "author": "admin"
     },
     {
       "id": 44,
       "title": "Man in the Mirror",
       "artist": "Michael Jackson",
       "minutes": 5,
-      "seconds": 19
+      "seconds": 19,
+      "author": "admin"
     },
     {
       "id": 45,
       "title": "Jessie's Girl",
       "artist": "Rick Springfield",
       "minutes": 3,
-      "seconds": 14
+      "seconds": 14,
+      "author": "admin"
     },
     {
       "id": 46,
       "title": "I Just Called to Say I Love You",
       "artist": "Stevie Wonder",
       "minutes": 4,
-      "seconds": 22
+      "seconds": 22,
+      "author": "admin"
     },
     {
       "id": 47,
       "title": "Jump",
       "artist": "Van Halen",
       "minutes": 4,
-      "seconds": 1
+      "seconds": 1,
+      "author": "admin"
     },
     {
       "id": 48,
       "title": "Total Eclipse of the Heart",
       "artist": "Bonnie Tyler",
       "minutes": 6,
-      "seconds": 59
+      "seconds": 59,
+      "author": "admin"
     },
     {
       "id": 49,
       "title": "I Gotta Feeling",
       "artist": "The Black Eyed Peas",
       "minutes": 4,
-      "seconds": 49
+      "seconds": 49,
+      "author": "admin"
     },
     {
       "id": 50,
       "title": "Can't Stop the Feeling!",
       "artist": "Justin Timberlake",
       "minutes": 3,
-      "seconds": 56
+      "seconds": 56,
+      "author": "admin"
     }
   ]
 }

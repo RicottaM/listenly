@@ -53,4 +53,30 @@ export class RecordingService {
 
     this.router.navigate(['/recordings'])
   }
+
+  async deleteRecording(id: number): Promise<void> {
+    await fetch(`${this.recordingUrl}/${id}`, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+      .then(response => {
+        if (!response.ok) {
+          response.text().then(errorText => {
+            console.error(`Server error: ${response.status} - ${errorText}`)
+          })
+
+          if (response instanceof Error) {
+            throw new Error(response.message)
+          }
+          throw new Error('An error occured while updating user recordings')
+        }
+      })
+      .catch(error => {
+        console.error('There was a problem with the fetch operation:', error)
+      })
+
+    window.location.reload()
+  }
 }

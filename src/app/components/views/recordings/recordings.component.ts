@@ -49,7 +49,11 @@ export class RecordingsComponent {
     this.selectedRowIndex = rowIndex
   }
 
-  setHoveredButton(buttonType: string | null) {
+  setHoveredButton(buttonType: string | null): void {
     this.hoveredButton = buttonType
+  }
+
+  deleteUserRecording(index: number): void {
+    this.authService.deleteRecording(this.recordings[index].id, this.userName)
   }
 }

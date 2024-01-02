@@ -1,32 +1,30 @@
 <div class="d-flex">
   <app-nav></app-nav>
 
-  <div class="container w-100" *ngIf="userName">
+  @if (userName) {
+  <div class="container w-100">
     <div class="d-flex py-3">
-      <a class="px-1 cursor-pointer jump-animation">
+      <div class="px-1 cursor-pointer jump-animation">
         <img src="../../../../assets/svg/add-hovered.svg" width="48" />
-      </a>
+      </div>
 
-      <a class="px-1">
-        <img
-          src="../../../../assets/svg/delete-selected.svg"
-          class="cursor-pointer jump-animation"
-          *ngIf="selectedRowIndex !== null"
-          width="48"
-        />
-        <img
-          src="../../../../assets/svg/button-circle-round-remove-svgrepo-com.svg"
-          *ngIf="selectedRowIndex === null"
-          width="48"
-        />
-      </a>
+      @if (selectedRowIndex !== null) {
+      <div class="px-1" (click)="deleteUserRecording(selectedRowIndex)">
+        <img src="../../../../assets/svg/delete-selected.svg" class="cursor-pointer jump-animation" width="48" />
+      </div>
+      } @else {
+      <div class="px-1">
+        <img src="../../../../assets/svg/button-circle-round-remove-svgrepo-com.svg" width="48" />
+      </div>
+      }
 
-      <a class="px-1 jump-animation cursor-pointer">
+      <div class="px-1 jump-animation cursor-pointer">
         <img src="../../../../assets/svg/globe-search-web-browser-svgrepo-com.svg" width="48" />
-      </a>
+      </div>
     </div>
 
-    <table class="table rounded-2 overflow-hidden table-hover" *ngIf="recordings.length > 0">
+    @if (recordings.length > 0) {
+    <table class="table rounded-2 overflow-hidden table-hover">
       <thead>
         <tr class="border-bottom">
           <th scope="col">#</th>
@@ -43,12 +41,14 @@
           (mouseleave)="setHoveredRow(null)"
           [ngClass]="{ 'table-active': selectedRowIndex === index }"
         >
-          <th scope="row" *ngIf="hoveredRowIndex !== index && selectedRowIndex !== index" class="w-10">
-            {{ index + 1 }}
-          </th>
-          <th scope="row" *ngIf="hoveredRowIndex === index || selectedRowIndex === index" class="w-10">
+          <th scope="row" class="w-10">
+            @if (hoveredRowIndex === index || selectedRowIndex === index) {
             <img src="../../../assets/svg/play.svg" />
+            } @else {
+            {{ index + 1 }}
+            }
           </th>
+
           <td>{{ recording.title }}</td>
           <td>{{ recording.artist }}</td>
           <td>{{ recording.minutes }}:{{ recording.seconds > 9 ? recording.seconds : '0' + recording.seconds }}</td>
@@ -56,9 +56,13 @@
         }
       </tbody>
     </table>
+    }
   </div>
-
-  <div class="d-flex w-100 align-self-center justify-content-center" *ngIf="!userName">
+  } @else {
+  <div class="d-flex w-100 align-self-center justify-content-center">
     <app-login-form></app-login-form>
   </div>
+  }
+
+  <div class="modal fade" id="new-recording">ddd</div>
 </div>

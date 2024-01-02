@@ -35,36 +35,42 @@ export class AuthService {
       password: password,
     }
 
-    const userTaken = await this.getUserByEmail(email)
+    const nickTaken = await this.getUserByNick(nickname)
 
-    if (userTaken) {
-      console.error('Email already in use')
+    if (nickTaken) {
+      console.error('Nickname already in use')
     } else {
-      await fetch(this.userUrl, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(userData),
-      })
-        .then(response => {
-          if (!response.ok) {
-            response.text().then(errorText => {
-              console.error(`Server error: ${response.status} - ${errorText}`)
-            })
+      const emailTaken = await this.getUserByEmail(email)
 
-            if (response instanceof Error) {
-              throw new Error(response.message)
+      if (emailTaken) {
+        console.error('Email already in use')
+      } else {
+        await fetch(this.userUrl, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(userData),
+        })
+          .then(response => {
+            if (!response.ok) {
+              response.text().then(errorText => {
+                console.error(`Server error: ${response.status} - ${errorText}`)
+              })
+
+              if (response instanceof Error) {
+                throw new Error(response.message)
+              }
+              throw new Error('An error occured while adding user')
             }
-            throw new Error('An error occured while adding user')
-          }
-        })
-        .catch(error => {
-          console.error('There was a problem with the fetch operation:', error)
-        })
+          })
+          .catch(error => {
+            console.error('There was a problem with the fetch operation:', error)
+          })
 
-      cookieService.set('username', userData.nickname, 1)
-      this.router.navigate(['/'])
+        cookieService.set('username', userData.nickname, 1)
+        this.router.navigate(['/'])
+      }
     }
   }
 
@@ -85,6 +91,44 @@ export class AuthService {
 
   async logout(cookieService: CookieService): Promise<void> {
     cookieService.delete('username')
+    window.location.reload()
+  }
+
+  async deleteRecording(recordingId: number, userName: string): Promise<void> {
+    const user = await this.getUserByNick(userName)
+    const updatedRecordings = user?.recordings.filter((id: number) => id !== recordingId)
+
+    const userUpdatedData = {
+      id: user?.id,
+      nickname: user?.nickname,
+      email: user?.email,
+      password: user?.password,
+      recordings: updatedRecordings,
+    }
+
+    await fetch(`${this.userUrl}/${user?.id}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(userUpdatedData),
+    })
+      .then(response => {
+        if (!response.ok) {
+          response.text().then(errorText => {
+            console.error(`Server error: ${response.status} - ${errorText}`)
+          })
+
+          if (response instanceof Error) {
+            throw new Error(response.message)
+          }
+          throw new Error('An error occured while updating user recordings')
+        }
+      })
+      .catch(error => {
+        console.error('There was a problem with the fetch operation:', error)
+      })
+
     window.location.reload()
   }
 }
