@@ -7,7 +7,7 @@
     <table class="table rounded-2 overflow-hidden table-hover" *ngIf="recordings.length > 0">
       <thead>
         <tr class="border-bottom">
-          <th scope="col" class="px-3">#</th>
+          <th scope="col">#</th>
           <th scope="col">Title</th>
           <th scope="col">Artist</th>
           <th scope="col">Duration</th>
@@ -16,13 +16,13 @@
       <tbody>
         @for (recording of recordings; track recording.id; let index = $index) {
         <tr
-          (dblclick)="play()"
+          (click)="play()"
           class="cursor-pointer"
           (mouseenter)="setHoveredRow(index)"
           (mouseleave)="setHoveredRow(null)"
         >
-          <th scope="row" class="px-3" *ngIf="hoveredRowIndex !== index">{{ index + 1 }}</th>
-          <th scope="row" class="px-3" *ngIf="hoveredRowIndex === index">
+          <th scope="row" *ngIf="hoveredRowIndex !== index" class="w-10">{{ index + 1 }}</th>
+          <th scope="row" *ngIf="hoveredRowIndex === index" class="w-10">
             <img src="../../../assets/svg/play.svg" />
           </th>
           <td>{{ recording.title }}</td>
