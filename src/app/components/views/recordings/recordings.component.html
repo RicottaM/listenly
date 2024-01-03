@@ -4,22 +4,47 @@
   @if (userName) {
   <div class="container w-100">
     <div class="d-flex py-3">
-      <div class="px-1 cursor-pointer jump-animation">
-        <img src="../../../../assets/svg/add-hovered.svg" width="48" />
+      <div class="px-1 cursor-pointer resize-animation">
+        <img
+          src="../../../../assets/svg/add-hovered.svg"
+          data-toggle="tooltip"
+          data-placement="top"
+          title="Add recording to your library"
+          width="48"
+        />
       </div>
 
       @if (selectedRowIndex !== null) {
       <div class="px-1" (click)="deleteUserRecording(selectedRowIndex)">
-        <img src="../../../../assets/svg/delete-selected.svg" class="cursor-pointer jump-animation" width="48" />
+        <img
+          src="../../../../assets/svg/delete-selected.svg"
+          data-toggle="tooltip"
+          data-placement="top"
+          title="Remove selected recording"
+          class="cursor-pointer resize-animation"
+          width="48"
+        />
       </div>
       } @else {
       <div class="px-1">
-        <img src="../../../../assets/svg/button-circle-round-remove-svgrepo-com.svg" width="48" />
+        <img
+          src="../../../../assets/svg/button-circle-round-remove-svgrepo-com.svg"
+          data-toggle="tooltip"
+          data-placement="top"
+          title="Select recording"
+          width="48"
+        />
       </div>
       }
 
-      <div class="px-1 jump-animation cursor-pointer">
-        <img src="../../../../assets/svg/globe-search-web-browser-svgrepo-com.svg" width="48" />
+      <div class="px-1 resize-animation cursor-pointer">
+        <img
+          src="../../../../assets/svg/globe-search-web-browser-svgrepo-com.svg"
+          data-toggle="tooltip"
+          data-placement="top"
+          title="Explore recordings"
+          width="48"
+        />
       </div>
     </div>
 

@@ -34,28 +34,28 @@ tbody tr:hover {
   cursor: pointer;
 }
 
-.jump-animation:hover {
-  animation: jumpUp 0.35s ease-in forwards;
+.resize-animation:hover {
+  animation: scaleUp 0.1s ease-in forwards;
 }
 
-.jump-animation:not(:hover) {
-  animation: jumpDown 0.35s ease-out forwards;
+.resize-animation:not(:hover) {
+  animation: scaleDown 0.1s ease-out forwards;
 }
 
-@keyframes jumpUp {
+@keyframes scaleUp {
   0% {
-    transform: translateY(0);
+    transform: scale(1);
   }
   100% {
-    transform: translateY(-5px);
+    transform: scale(1.05);
   }
 }
 
-@keyframes jumpDown {
+@keyframes scaleDown {
   0% {
-    transform: translateY(-5px);
+    transform: scale(1.05);
   }
   100% {
-    transform: translateY(0);
+    transform: scale(1);
   }
 }

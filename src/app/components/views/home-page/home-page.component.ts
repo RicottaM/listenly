@@ -1,5 +1,5 @@
 import { Component } from '@angular/core'
-import { DescriptionComponent } from '../../desctiption/description.component'
+import { DescriptionComponent } from '../../description/description.component'
 import { NavComponent } from '../../nav/nav.component'
 
 @Component({

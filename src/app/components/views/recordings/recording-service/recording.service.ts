@@ -1,6 +1,6 @@
 import { Injectable, inject } from '@angular/core'
 import { Router } from '@angular/router'
-import { Recording } from '../../models/recording.model'
+import { Recording } from '../../../../models/recording.model'
 
 @Injectable({
   providedIn: 'root',

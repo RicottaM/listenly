@@ -1,11 +1,11 @@
-import { Component, inject } from '@angular/core'
+import { AfterViewChecked, AfterViewInit, Component, inject } from '@angular/core'
 import { NavComponent } from '../../nav/nav.component'
 import { AuthService } from '../../../services/auth/auth.service'
 import { User } from '../../../models/user.model'
 import { Recording } from '../../../models/recording.model'
 import { CommonModule } from '@angular/common'
 import { LoginFormComponent } from '../../login-form/login-form.component'
-import { RecordingService } from '../../../services/recording/recording.service'
+import { RecordingService } from './recording-service/recording.service'
 import { CookieService } from 'ngx-cookie-service'
 
 @Component({
@@ -23,7 +23,6 @@ export class RecordingsComponent {
   userName: string = ''
   hoveredRowIndex: number | null = null
   selectedRowIndex: number | null = null
-  hoveredButton: string | null = null
 
   constructor(private cookieService: CookieService) {
     this.userName = this.cookieService.get('username')
@@ -47,10 +46,6 @@ export class RecordingsComponent {
 
   setSelectedRow(rowIndex: number | null): void {
     this.selectedRowIndex = rowIndex
-  }
-
-  setHoveredButton(buttonType: string | null): void {
-    this.hoveredButton = buttonType
   }
 
   deleteUserRecording(index: number): void {
