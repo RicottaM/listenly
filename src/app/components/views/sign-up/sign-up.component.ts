@@ -17,7 +17,7 @@ export class SignUpComponent {
     nickname: new FormControl('', [
       Validators.required,
       Validators.minLength(3),
-      Validators.maxLength(15),
+      Validators.maxLength(10),
       Validators.pattern(/^[A-Za-z0-9]+$/),
     ]),
     email: new FormControl('', [Validators.email, Validators.required]),
@@ -46,7 +46,7 @@ export class SignUpComponent {
         this.applyForm.get('nickname')?.hasError('maxlength') ||
         this.applyForm.get('nickname')?.hasError('required')
       ) {
-        console.error('Nickname must be between 3 and 15 characters')
+        console.error('Nickname must be between 3 and 10 characters')
       }
 
       if (this.applyForm.get('nickname')?.hasError('pattern')) {

@@ -1,11 +1,7 @@
 .flex-column {
   background-color: #05386b;
   color: #5cdb95;
-  height: 100vh;
-}
-
-li {
-  border-top: #8ee4af 1px solid;
+  height: 100svh;
 }
 
 .nav-link {

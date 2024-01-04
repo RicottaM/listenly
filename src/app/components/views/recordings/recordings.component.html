@@ -4,7 +4,7 @@
   @if (userName) {
   <div class="container w-100">
     <div class="d-flex py-3">
-      <div class="px-1 cursor-pointer resize-animation">
+      <div class="px-1 cursor-pointer resize-animation" (click)="openModal()">
         <img
           src="../../../../assets/svg/add-hovered.svg"
           data-toggle="tooltip"
@@ -89,5 +89,24 @@
   </div>
   }
 
-  <div class="modal fade" id="new-recording">ddd</div>
+  <!-- The Modal -->
+  <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Modal Heading</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">Modal body..</div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" (click)="closeModal()">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

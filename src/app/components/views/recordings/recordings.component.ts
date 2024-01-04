@@ -51,4 +51,20 @@ export class RecordingsComponent {
   deleteUserRecording(index: number): void {
     this.authService.deleteRecording(this.recordings[index].id, this.userName)
   }
+
+  openModal() {
+    const modal = document.getElementById('myModal')
+
+    if (modal) {
+      modal.style.display = 'block'
+    }
+  }
+
+  closeModal() {
+    const modal = document.getElementById('myModal')
+
+    if (modal) {
+      modal.style.display = 'none'
+    }
+  }
 }
