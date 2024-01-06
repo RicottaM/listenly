@@ -1,47 +1,40 @@
-label,
-p {
-  color: #5cdb95;
+h1,
+label {
+  color: #c66852;
 }
 
 input {
-  background-color: #edf5e1;
-  color: #379683;
-  border: none;
+  background-color: #363637;
+  color: #c66852;
+  border: 2px solid #c66852;
 }
 
 input:focus {
-  background-color: #edf5e1;
-  color: #379683;
+  background-color: #363637;
+  color: #c66852;
   box-shadow: none;
-  outline: none;
-  border: none;
+  border: 2px solid #c66852;
 }
 
 button {
-  color: #5cdb95;
-  border: 2px solid #5cdb95;
+  color: #c66852;
+  border: 2px solid #c66852;
 }
 
 button:hover {
-  background-color: #379683;
-  color: #5cdb95;
+  background-color: #faa683;
+  color: #c66852;
 }
 
 form {
-  background-color: #05386b;
+  background-color: #363637;
   border-radius: 20px;
 }
 
 .nav-link {
-  color: #5cdb95;
+  color: #c66852;
 }
 
-.nav-link:hover,
-.nav-link:visited {
-  color: #edf5e1;
-}
-
-.custom {
-  border-top: 1px solid #5cdb95;
-  opacity: 100%;
+.nav-link:hover {
+  color: #faa683;
 }

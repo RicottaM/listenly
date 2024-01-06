@@ -1,11 +1,11 @@
 td,
 th {
-  background-color: #5cdb95;
-  color: #05386b;
+  background-color: #2a2a2b;
+  color: #c66852;
 }
 
 .table tr {
-  border-bottom: 1px solid #5cdb95;
+  border-bottom: 1px solid #2a2a2b;
 }
 
 .table td {
@@ -21,13 +21,17 @@ tbody tr:hover {
   cursor: pointer;
 }
 
-.w-10 {
-  width: 10%;
+.table-active td,
+.table-active th {
+  background-color: #faa683;
 }
 
-.table tr .selected {
+.table-active tr {
+  border-radius: 5px !important;
+}
+
+.w-10 {
   width: 10%;
-  background-color: aqua;
 }
 
 .cursor-pointer {
@@ -47,13 +51,13 @@ tbody tr:hover {
     transform: scale(1);
   }
   100% {
-    transform: scale(1.05);
+    transform: scale(1.1);
   }
 }
 
 @keyframes scaleDown {
   0% {
-    transform: scale(1.05);
+    transform: scale(1.1);
   }
   100% {
     transform: scale(1);

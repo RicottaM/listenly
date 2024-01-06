@@ -53,7 +53,7 @@ export class RecordingsComponent {
   }
 
   openModal() {
-    const modal = document.getElementById('myModal')
+    const modal: HTMLElement | null = document.getElementById('myModal')
 
     if (modal) {
       modal.style.display = 'block'
@@ -61,7 +61,7 @@ export class RecordingsComponent {
   }
 
   closeModal() {
-    const modal = document.getElementById('myModal')
+    const modal: HTMLElement | null = document.getElementById('myModal')
 
     if (modal) {
       modal.style.display = 'none'

@@ -1,17 +1,17 @@
 .flex-column {
-  background-color: #05386b;
-  color: #5cdb95;
+  background-color: #363637;
+  color: #c66852;
   height: 100svh;
 }
 
 .nav-link {
-  color: #5cdb95;
+  color: #c66852;
 }
 
 .nav-link:hover,
 .nav-link:visited {
-  background-color: #379683;
-  color: #5cdb95;
+  background-color: #faa683;
+  color: #c66852;
 }
 
 .mt-auto {

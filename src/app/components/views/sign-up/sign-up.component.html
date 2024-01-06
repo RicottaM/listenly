@@ -1,12 +1,9 @@
-<div class="d-flex">
+<div class="d-flex h-100">
   <app-nav></app-nav>
   <div class="d-flex align-items-center mb-3 justify-content-center w-100">
-    <form class="px-5 d-flex flex-column" [formGroup]="applyForm" (submit)="register()">
-      <div class="row py-4 justify-content-center align-items-center">
-        <div class="col-auto"><img src="../../../../assets/svg/logo-small.svg" /></div>
-        <div class="col-auto"><h1>Register</h1></div>
-      </div>
-      <hr class="custom" />
+    <form class="px-5 d-flex pb-3 flex-column" [formGroup]="applyForm" (submit)="register()">
+      <h1 class="text-center pt-4">Register</h1>
+
       <div class="form-group py-3">
         <div class="form-group py-3">
           <label for="email" class="fs-5">Nickname</label>
